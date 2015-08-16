@@ -15,6 +15,9 @@ EnumState gameLoop(sf::RenderWindow& window)
     CText mainMessage;
     mainMessageInit(mainMessage, mainScreenFont);
 
+    MinesArray mines(9);
+    mines.addMines(10);
+    mines.afisare();
 
     while (window.isOpen())
     {

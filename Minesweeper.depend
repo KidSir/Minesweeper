@@ -418,15 +418,16 @@
 	<SFML/Graphics.hpp>
 	<string>
 
-1439752083 d:\proiect\proiect sfml\minesweeper\include\gameloop.h
+1439757789 d:\proiect\proiect sfml\minesweeper\include\gameloop.h
 	<SFML/Graphics.hpp>
 	<cstring>
 	"CText.h"
 	"MainInits.h"
 	<iostream>
 	"EnumState.h"
+	"MinesArray.h"
 
-1439751475 source:d:\proiect\proiect sfml\minesweeper\src\gameloop.cpp
+1439757846 source:d:\proiect\proiect sfml\minesweeper\src\gameloop.cpp
 	"GameLoop.h"
 
 1439666201 d:\proiect\proiect sfml\minesweeper\resources.h
@@ -439,10 +440,18 @@
 1439695104 source:d:\proiect\proiect sfml\minesweeper\src\resources.cpp
 	"resources.h"
 
-1439750926 source:d:\proiect\proiect sfml\minesweeper\src\statemanager.cpp
+1439752055 source:d:\proiect\proiect sfml\minesweeper\src\statemanager.cpp
 	"StateManager.h"
 	<iostream>
 	<EnumState.h>
 
 1439748835 d:\proiect\proiect sfml\minesweeper\include\enumstate.h
+
+1439757641 d:\proiect\proiect sfml\minesweeper\include\minesarray.h
+
+1439757696 source:d:\proiect\proiect sfml\minesweeper\src\minesarray.cpp
+	"MinesArray.h"
+	"cstdlib"
+	"ctime"
+	<iostream>
 
