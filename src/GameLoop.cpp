@@ -15,9 +15,11 @@ EnumState gameLoop(sf::RenderWindow& window)
     CText mainMessage;
     mainMessageInit(mainMessage, mainScreenFont);
 
-    MinesArray mines(9);
-    mines.addMines(10);
-    mines.afisare();
+    DangerBoard dangerBoard(4); // constructor , cu nr de linii
+    dangerBoard.addMines(1); // se adauga mine
+    dangerBoard.addDangerZones();// se adauga zonele periculoasa
+    // prin excludere obtinand si zonele sigure
+    dangerBoard.afisare();
 
     while (window.isOpen())
     {

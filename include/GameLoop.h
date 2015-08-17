@@ -7,7 +7,7 @@
 #include "MainInits.h"
 #include <iostream>
 #include "EnumState.h"
-#include "MinesArray.h"
+#include "DangerBoard.h"
 
 //declaratiai etapei de joc propriu-zis
 EnumState gameLoop(sf::RenderWindow& window);

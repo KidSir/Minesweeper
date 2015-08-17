@@ -38,10 +38,8 @@ bool handleEvents(sf::Event event, sf::Window& window, EnumState& exitValue)
                 exitValue = gameValue;
                 return true;
             }
-
         }
     }
-
     return false;
 }
 

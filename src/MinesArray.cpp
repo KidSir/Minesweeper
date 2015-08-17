@@ -31,12 +31,12 @@ void MinesArray::addMines(int nrMines)
 {
     for(int nr = 1; nr <= nrMines; nr++)
     {
-        int x = rand()%nrMines + 1;
-        int y = rand()%nrMines + 1;
+        int x = rand() % size + 1;
+        int y = rand() % size + 1;
         while(mines[x][y] != 0)
         {
-            x = rand()%nrMines + 1;
-            y = rand()%nrMines + 1;
+            x = rand() % size + 1;
+            y = rand() % size + 1;
         }
         mines[x][y] = -1;
     }
