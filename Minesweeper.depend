@@ -396,7 +396,7 @@
 1439664528 d:\proiect\proiect sfml\minesweeper\include\ctext.h
 	<SFML/Graphics.hpp>
 
-1439751528 source:d:\proiect\proiect sfml\minesweeper\src\mainloop.cpp
+1439849986 source:d:\proiect\proiect sfml\minesweeper\src\mainloop.cpp
 	"MainLoop.h"
 	<iostream>
 	"CText.h"
@@ -404,21 +404,23 @@
 	"resources.h"
 	"EnumState.h"
 
-1439778274 source:d:\proiect\proiect sfml\minesweeper\src\maininits.cpp
+1439849970 source:d:\proiect\proiect sfml\minesweeper\src\maininits.cpp
 	"MainInits.h"
 	"resources.h"
+	<iostream>
 
-1439751175 d:\proiect\proiect sfml\minesweeper\include\maininits.h
+1439849593 d:\proiect\proiect sfml\minesweeper\include\maininits.h
 	<SFML/Graphics.hpp>
 	<cstring>
 	"CText.h"
 	"EnumState.h"
+	"RevealedElem.h"
 
 1439779996 d:\proiect\proiect sfml\minesweeper\include\resources.h
 	<SFML/Graphics.hpp>
 	<string>
 
-1439778431 d:\proiect\proiect sfml\minesweeper\include\gameloop.h
+1439787113 d:\proiect\proiect sfml\minesweeper\include\gameloop.h
 	<SFML/Graphics.hpp>
 	<cstring>
 	"CText.h"
@@ -427,8 +429,10 @@
 	"EnumState.h"
 	"DangerBoard.h"
 
-1439780872 source:d:\proiect\proiect sfml\minesweeper\src\gameloop.cpp
+1439850213 source:d:\proiect\proiect sfml\minesweeper\src\gameloop.cpp
 	"GameLoop.h"
+	"DisplayedValues.h"
+	"RevealedElem.h"
 
 1439666201 d:\proiect\proiect sfml\minesweeper\resources.h
 
@@ -455,17 +459,36 @@
 	"ctime"
 	<iostream>
 
-1439777948 source:d:\proiect\proiect sfml\minesweeper\src\revealedelem.cpp
+1439850311 source:d:\proiect\proiect sfml\minesweeper\src\revealedelem.cpp
 	"RevealedElem.h"
+	<iostream>
+	"resources.h"
+	<cmath>
 
-1439778646 d:\proiect\proiect sfml\minesweeper\include\revealedelem.h
+1439848132 d:\proiect\proiect sfml\minesweeper\include\revealedelem.h
+	"dispEnum.h"
+	<SFML/Graphics.hpp>
 
-1439780561 d:\proiect\proiect sfml\minesweeper\include\dangerboard.h
+1439790766 d:\proiect\proiect sfml\minesweeper\include\dangerboard.h
+	"dispEnum.h"
+	"dangEnum.h"
 
-1439780665 source:d:\proiect\proiect sfml\minesweeper\src\dangerboard.cpp
+1439791441 source:d:\proiect\proiect sfml\minesweeper\src\dangerboard.cpp
 	"DangerBoard.h"
 	"cstdlib"
 	"ctime"
 	<iostream>
 	"resources.h"
+
+1439791383 d:\proiect\proiect sfml\minesweeper\include\displayedvalues.h
+	"dispEnum.h"
+
+1439790160 d:\proiect\proiect sfml\minesweeper\include\dispenum.h
+
+1439790566 d:\proiect\proiect sfml\minesweeper\include\dangenum.h
+
+1439829801 source:d:\proiect\proiect sfml\minesweeper\src\displayedvalues.cpp
+	"DisplayedValues.h"
+	"DangerBoard.h"
+	<iostream>
 

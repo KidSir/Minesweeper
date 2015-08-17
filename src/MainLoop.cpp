@@ -24,14 +24,11 @@ EnumState mainLoop(sf::RenderWindow& window)
     while (window.isOpen())
     {
 
+        RevealedElem revealedElem(3);
         sf::Event event;
-        if(handleEvents(event, window, value))
+        if(handleEventsMain(event, window, value))
         {
-            if(value == gameValue)
-                return gameValue;
-            else
-                return mainValue;
-            return exitValue;
+            return value;
         }
 
         window.clear();

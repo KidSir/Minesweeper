@@ -1,4 +1,6 @@
 #include "GameLoop.h"
+#include "DisplayedValues.h"
+#include "RevealedElem.h"
 
 EnumState gameLoop(sf::RenderWindow& window)
 {
@@ -16,23 +18,32 @@ EnumState gameLoop(sf::RenderWindow& window)
     mainMessageInit(mainMessage, mainScreenFont);
 
     DangerBoard dangerBoard(4); // constructor , cu nr de linii
-    dangerBoard.addMines(1); // se adauga mine
+    dangerBoard.addMines(4); // se adauga mine
     dangerBoard.addDangerZones();// se adauga zonele periculoasa
     // prin excludere obtinand si zonele sigure
     dangerBoard.afisare();
 
+    DisplayedValues displayedValues(dangerBoard);
+    displayedValues.afisare();
+
+    RevealedElem revealedElem(dangerBoard.getSize());// setare dimensiune
+    revealedElem.setGridValues();//initializare cu valorile ce vor fi afisate
+    // pe ecran, valorile fiind precalculate
+    revealedElem.afisareConsola();
+    // afisare in consola pentru verificare corectitudine
+    revealedElem.displayBoard(window); // afisarea grafica a tablei de joc
+
     while (window.isOpen())
     {
         sf::Event event;
-        if(handleEvents(event, window, value))
+
+        if(handleEventsGame(event, window, value, revealedElem))
         {
-            if(exitValue == mainValue)
-                return gameValue;
-            else
-                return mainValue;
-            return exitValue;
+            return value;
         }
         window.clear();
+
+        revealedElem.displayBoard(window);
         //gameLogo.draw(window);
         //mainMessage.draw(window);
         window.display();

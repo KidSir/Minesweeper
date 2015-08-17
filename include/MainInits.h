@@ -4,9 +4,10 @@
 #include <cstring>
 #include "CText.h"
 #include "EnumState.h"
+#include "RevealedElem.h"
 
 void gameLogoInit(CText& gameLogo, sf::Font& mainScreenFont);
 void mainMessageInit(CText& mainMessage, sf::Font& mainScreenFont);
-bool handleEvents(sf::Event event, sf::Window& window, EnumState& exitValue);
-
+bool handleEventsGame(sf::Event event, sf::RenderWindow& window, EnumState& exitValue, RevealedElem& revealedElem);
+bool handleEventsMain(sf::Event event, sf::RenderWindow& window, EnumState& exitValue);
 #endif // MAININITS_H

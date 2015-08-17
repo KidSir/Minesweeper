@@ -1,6 +1,6 @@
 #include "MainInits.h"
 #include "resources.h"
-
+#include <iostream>
 
 void gameLogoInit(CText& gameLogo, sf::Font& mainScreenFont)
 {
@@ -24,7 +24,7 @@ void mainMessageInit(CText& mainMessage, sf::Font& mainScreenFont)
     mainMessage.centerTextOrigin();
 }
 
-bool handleEvents(sf::Event event, sf::Window& window, EnumState& exitValue)
+bool handleEventsGame(sf::Event event, sf::RenderWindow& window, EnumState& exitValue, RevealedElem& revealedElem)
 {
      while (window.pollEvent(event))
     {
@@ -32,14 +32,52 @@ bool handleEvents(sf::Event event, sf::Window& window, EnumState& exitValue)
         {
         case sf::Event::Closed:
             window.close();
+            break;
+    //Intoarcerea in meniul principal este temporar dezactivata
+ /*       case sf::Event::KeyPressed:
+            if(event.key.code == sf::Keyboard::Return)
+            {
+                exitValue = mainValue;
+                return true;
+            }
+            break;
+*/
+
+        }
+    }
+
+    //rezolvarea inputului primit de user
+    if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
+    {
+
+          int x =  revealedElem.locateCellX(sf::Mouse::getPosition(window).x, window);
+          int y =  revealedElem.locateCellY(sf::Mouse::getPosition(window).y, window);
+          // cele doua variabile de mai sus contin indecsii corespunzatori tablei
+          // de joc in functie de pozitia mouse-ului
+          //std::cout << x << " " << y << std::endl;
+          revealedElem.userAction(x, y);
+    }
+
+    return false;
+}
+
+bool handleEventsMain(sf::Event event, sf::RenderWindow& window, EnumState& exitValue)
+{
+    while (window.pollEvent(event))
+    {
+        switch(event.type)
+        {
+        case sf::Event::Closed:
+            window.close();
+            break;
         case sf::Event::KeyPressed:
             if(event.key.code == sf::Keyboard::Return)
             {
                 exitValue = gameValue;
                 return true;
             }
+            break;
         }
     }
-    return false;
 }
 

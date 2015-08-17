@@ -57,19 +57,25 @@
 			<Add directory="D:/SFML-2.3.1/lib" />
 		</Linker>
 		<Unit filename="include/CText.h" />
+		<Unit filename="include/DangerBoard.h" />
+		<Unit filename="include/DisplayedValues.h" />
 		<Unit filename="include/EnumState.h" />
 		<Unit filename="include/GameLoop.h" />
 		<Unit filename="include/MainInits.h" />
 		<Unit filename="include/MainLoop.h" />
-		<Unit filename="include/MinesArray.h" />
+		<Unit filename="include/RevealedElem.h" />
 		<Unit filename="include/StateManager.h" />
+		<Unit filename="include/dangEnum.h" />
+		<Unit filename="include/dispEnum.h" />
 		<Unit filename="include/resources.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/CText.cpp" />
+		<Unit filename="src/DangerBoard.cpp" />
+		<Unit filename="src/DisplayedValues.cpp" />
 		<Unit filename="src/GameLoop.cpp" />
 		<Unit filename="src/MainInits.cpp" />
 		<Unit filename="src/MainLoop.cpp" />
-		<Unit filename="src/MinesArray.cpp" />
+		<Unit filename="src/RevealedElem.cpp" />
 		<Unit filename="src/StateManager.cpp" />
 		<Unit filename="src/resources.cpp" />
 		<Extensions>

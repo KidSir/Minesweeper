@@ -12,7 +12,4 @@
 //declaratiai etapei de joc propriu-zis
 EnumState gameLoop(sf::RenderWindow& window);
 
-
-
-
 #endif // GAMELOOP_H

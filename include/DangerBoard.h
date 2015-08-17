@@ -1,11 +1,8 @@
 #ifndef DANGERBOARD_H
 #define DANGERBOARD_H
+#include "dispEnum.h"
+#include "dangEnum.h"
 
-enum dang{
-mined = -1,
-safe,
-dangerous,
-};
 
 class DangerBoard
 {
@@ -15,6 +12,9 @@ class DangerBoard
         void addMines(int nrMines);
         void afisare();
         void addDangerZones();
+        int getSize();
+        disp getNearbyMines(int, int);
+        dang getValue(int, int);
         virtual ~DangerBoard();
     protected:
     private:
