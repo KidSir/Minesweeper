@@ -39,7 +39,7 @@ void CText::setPosition(sf::Vector2f position)
 }
 void CText::centerTextOrigin()
 {
-    m_text.setOrigin(m_text.getLocalBounds().left + m_text.getLocalBounds().width /2,m_text.getLocalBounds().height + m_text.getLocalBounds().height /2);
+    m_text.setOrigin(m_text.getLocalBounds().left + m_text.getLocalBounds().width /2, m_text.getLocalBounds().top + m_text.getLocalBounds().height /2);
 }
 
 void CText::draw(sf::RenderWindow& window)

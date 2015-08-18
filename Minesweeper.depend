@@ -389,7 +389,7 @@
 	<SFML/Graphics.hpp>
 	"EnumState.h"
 
-1439870992 source:d:\proiect\proiect sfml\minesweeper\src\ctext.cpp
+1439917895 source:d:\proiect\proiect sfml\minesweeper\src\ctext.cpp
 	"CText.h"
 	<cstring>
 
@@ -405,17 +405,18 @@
 	"resources.h"
 	"EnumState.h"
 
-1439869350 source:d:\proiect\proiect sfml\minesweeper\src\maininits.cpp
+1439935808 source:d:\proiect\proiect sfml\minesweeper\src\maininits.cpp
 	"MainInits.h"
 	"resources.h"
 	<iostream>
 
-1439866395 d:\proiect\proiect sfml\minesweeper\include\maininits.h
+1439935808 d:\proiect\proiect sfml\minesweeper\include\maininits.h
 	<SFML/Graphics.hpp>
 	<cstring>
 	"CText.h"
 	"EnumState.h"
 	"RevealedElem.h"
+	"MarkedElem.h"
 
 1439779996 d:\proiect\proiect sfml\minesweeper\include\resources.h
 	<SFML/Graphics.hpp>
@@ -430,10 +431,11 @@
 	"EnumState.h"
 	"DangerBoard.h"
 
-1439870032 source:d:\proiect\proiect sfml\minesweeper\src\gameloop.cpp
+1439932037 source:d:\proiect\proiect sfml\minesweeper\src\gameloop.cpp
 	"GameLoop.h"
 	"DisplayedValues.h"
 	"RevealedElem.h"
+	"MarkedElem.h"
 
 1439666201 d:\proiect\proiect sfml\minesweeper\resources.h
 
@@ -460,18 +462,20 @@
 	"ctime"
 	<iostream>
 
-1439873387 source:d:\proiect\proiect sfml\minesweeper\src\revealedelem.cpp
+1439936824 source:d:\proiect\proiect sfml\minesweeper\src\revealedelem.cpp
 	"RevealedElem.h"
 	<iostream>
 	"resources.h"
 	<cmath>
 	"CText.h"
 	<sstream>
+	"remap.h"
 
-1439869512 d:\proiect\proiect sfml\minesweeper\include\revealedelem.h
+1439935450 d:\proiect\proiect sfml\minesweeper\include\revealedelem.h
 	"dispEnum.h"
 	<SFML/Graphics.hpp>
 	"DisplayedValues.h"
+	"MarkedElem.h"
 
 1439790766 d:\proiect\proiect sfml\minesweeper\include\dangerboard.h
 	"dispEnum.h"
@@ -494,5 +498,13 @@
 1439869158 source:d:\proiect\proiect sfml\minesweeper\src\displayedvalues.cpp
 	"DisplayedValues.h"
 	"DangerBoard.h"
+	<iostream>
+
+1439923523 d:\proiect\proiect sfml\minesweeper\include\remap.h
+
+1439932518 d:\proiect\proiect sfml\minesweeper\include\markedelem.h
+
+1439932514 source:d:\proiect\proiect sfml\minesweeper\src\markedelem.cpp
+	"MarkedElem.h"
 	<iostream>
 

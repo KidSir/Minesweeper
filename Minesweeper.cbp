@@ -67,6 +67,7 @@
 		<Unit filename="include/StateManager.h" />
 		<Unit filename="include/dangEnum.h" />
 		<Unit filename="include/dispEnum.h" />
+		<Unit filename="include/remap.h" />
 		<Unit filename="include/resources.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/CText.cpp" />

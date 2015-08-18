@@ -24,7 +24,7 @@ void mainMessageInit(CText& mainMessage, sf::Font& mainScreenFont)
     mainMessage.centerTextOrigin();
 }
 
-bool handleEventsGame(sf::Event event, sf::RenderWindow& window, EnumState& exitValue, RevealedElem& revealedElem, const DisplayedValues& displayedValues)
+bool handleEventsGame(sf::Event event, sf::RenderWindow& window, EnumState& exitValue, RevealedElem& revealedElem,  DisplayedValues& displayedValues, MarkedElem& markedElem)
 {
      while (window.pollEvent(event))
     {
@@ -55,7 +55,7 @@ bool handleEventsGame(sf::Event event, sf::RenderWindow& window, EnumState& exit
           // cele doua variabile de mai sus contin indecsii corespunzatori tablei
           // de joc in functie de pozitia mouse-ului
          // std::cout << i << " " << j << std::endl;
-          revealedElem.userAction(i, j, displayedValues);
+          revealedElem.userAction(i, j, displayedValues, markedElem);
     }
 
     return false;
