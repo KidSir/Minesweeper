@@ -16,7 +16,7 @@ CText::~CText()
      m_text.setFont(font);
  }
 
- void CText::setString(char* text)
+ void CText::setString(std::string text)
  {
     m_text.setString(text);
  }

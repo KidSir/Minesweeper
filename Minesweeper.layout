@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="src\MainInits.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1331" topLine="28" />
-		</Cursor>
-	</File>
-	<File name="src\MainLoop.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="572" topLine="21" />
-		</Cursor>
-	</File>
-	<File name="src\RevealedElem.cpp" open="1" top="1" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1325" topLine="48" />
-		</Cursor>
-	</File>
-	<File name="src\StateManager.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="927" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\resources.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="28" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="include\CText.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="66" topLine="0" />
@@ -53,7 +28,7 @@
 	</File>
 	<File name="include\MainInits.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="388" topLine="0" />
+			<Cursor1 position="499" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="include\MainLoop.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -61,9 +36,9 @@
 			<Cursor1 position="139" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\RevealedElem.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\RevealedElem.h" open="1" top="1" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="471" topLine="5" />
+			<Cursor1 position="506" topLine="2" />
 		</Cursor>
 	</File>
 	<File name="include\StateManager.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -88,12 +63,12 @@
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="353" topLine="0" />
+			<Cursor1 position="167" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="src\CText.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="78" topLine="8" />
+			<Cursor1 position="110" topLine="8" />
 		</Cursor>
 	</File>
 	<File name="src\DangerBoard.cpp" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -103,12 +78,37 @@
 	</File>
 	<File name="src\DisplayedValues.cpp" open="1" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="393" topLine="4" />
+			<Cursor1 position="994" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="src\GameLoop.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1080" topLine="26" />
+			<Cursor1 position="1316" topLine="31" />
+		</Cursor>
+	</File>
+	<File name="src\MainInits.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1791" topLine="39" />
+		</Cursor>
+	</File>
+	<File name="src\MainLoop.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="690" topLine="8" />
+		</Cursor>
+	</File>
+	<File name="src\RevealedElem.cpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4176" topLine="98" />
+		</Cursor>
+	</File>
+	<File name="src\StateManager.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="401" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="src\resources.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="28" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

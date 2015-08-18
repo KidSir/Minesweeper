@@ -2,6 +2,8 @@
 #include <iostream>
 #include "resources.h"
 #include <cmath>
+#include "CText.h"
+#include <sstream>
 
 RevealedElem::RevealedElem(int _size)
 {
@@ -59,7 +61,7 @@ void RevealedElem::setGridValues()
     //a ferestrei
 }
 
-void RevealedElem::displayBoard(sf::RenderWindow& window)
+void RevealedElem::displayBoard(sf::RenderWindow& window, sf::Font& mainScreenFont)
 {
     int i, j;// variabile intermediare pentru a parcurge toate celule
     //tablei de joc
@@ -67,11 +69,16 @@ void RevealedElem::displayBoard(sf::RenderWindow& window)
     //X , Y variabile intermediare pentru parcurgearea saltata a tablei,
     //X,si Y reprezentand  coltul stang al fiecarei celule
     sf::CircleShape cerc(cellSize/2);
-    for(int X = startGridX, i = 1; i <= size; X += cellSize, i++)
-    {
-        for(int Y = startGridY, j = 1; j <= size; Y +=cellSize, j++)
-        {
+    CText numarMine;
+    numarMine.setFont(mainScreenFont);
 
+    CText semnIntrebare;
+    semnIntrebare.setFont(mainScreenFont);
+
+    for(int Y = startGridY, i = 1; i <= size; Y +=cellSize, i++)
+    {
+        for(int X = startGridX, j = 1; j <= size; X += cellSize, j++)
+        {
             switch(board[i][j])
             {
 
@@ -79,6 +86,14 @@ void RevealedElem::displayBoard(sf::RenderWindow& window)
 
                 cerc.setPosition(X, Y);
                 cerc.setFillColor(sf::Color::White);
+
+                semnIntrebare.setColor(sf::Color::Black);
+                semnIntrebare.setPosition(sf::Vector2f(X + cellSize/2, Y + cellSize/2));
+                semnIntrebare.setString("?");
+                semnIntrebare.setSize(20);
+                semnIntrebare.centerTextOrigin();
+
+
                 //std::cout << X << " " << Y << std::endl;
                 break;
             case empty:
@@ -87,9 +102,43 @@ void RevealedElem::displayBoard(sf::RenderWindow& window)
                 cerc.setFillColor(sf::Color::Blue);
                 //std::cout << X << " " << Y << std::endl;
                 break;
+            case mine:
+                cerc.setPosition(X, Y);
+                cerc.setFillColor(sf::Color::Red);
+                break;
+            default:
+
+                cerc.setPosition(X, Y);
+                cerc.setFillColor(sf::Color::Yellow);
+
+
+                numarMine.setColor(sf::Color::Red);
+                numarMine.setSize(20);
+
+                numarMine.setPosition(sf::Vector2f(X + cellSize/2, Y + cellSize/2));//
+                std::stringstream strStream;
+                int x = board[i][j];
+                strStream << x;
+                std::string temp = strStream.str();
+                numarMine.setString(temp.c_str());
+                numarMine.centerTextOrigin();
 
             }
             window.draw(cerc);
+            switch(board[i][j])
+            {
+                case mine:
+
+                    break;
+                case hidden:
+                    semnIntrebare.draw(window);
+
+                    break;
+                default:
+                    numarMine.draw(window);
+
+            }
+
             // Setari temporare pentru a vedea daca pozitiile calculate
             // sunt corecte
 
@@ -132,17 +181,12 @@ void RevealedElem::init_board()
     }
 }
 
-void RevealedElem::userAction(int x, int y)
+void RevealedElem::userAction(int i, int j, DisplayedValues displayedValues)
 {
-    if(x >= 1 && x <= size && y >= 1 && y <= size)
+    if(i >= 1 && i <= size && j >= 1 && j <= size)
     {
+        //std::cout << x << " " << y << std::endl;
         // in viitor vor fi luate in calcul toate cazurile
-        board[x][y] = empty;
-        /*
-        switch(board[i][j])
-        {
-
-        }
-        */
+        board[i][j] = displayedValues.getValue(i, j);
     }
 }

@@ -1,6 +1,7 @@
 #ifndef CTEXT_H
 #define CTEXT_H
 #include <SFML/Graphics.hpp>
+#include <string>
 
 class CText
 {
@@ -8,7 +9,7 @@ class CText
         CText();
         virtual ~CText();
         void setFont(const sf::Font& font);
-        void setString(char*);
+        void setString(std::string);
         void setSize(int);
         void setColor(const sf::Color&);
         void setPosition(sf::Vector2f);

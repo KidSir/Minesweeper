@@ -24,7 +24,7 @@ void mainMessageInit(CText& mainMessage, sf::Font& mainScreenFont)
     mainMessage.centerTextOrigin();
 }
 
-bool handleEventsGame(sf::Event event, sf::RenderWindow& window, EnumState& exitValue, RevealedElem& revealedElem)
+bool handleEventsGame(sf::Event event, sf::RenderWindow& window, EnumState& exitValue, RevealedElem& revealedElem, const DisplayedValues& displayedValues)
 {
      while (window.pollEvent(event))
     {
@@ -50,12 +50,12 @@ bool handleEventsGame(sf::Event event, sf::RenderWindow& window, EnumState& exit
     if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
     {
 
-          int x =  revealedElem.locateCellX(sf::Mouse::getPosition(window).x, window);
-          int y =  revealedElem.locateCellY(sf::Mouse::getPosition(window).y, window);
+          int i =  revealedElem.locateCellY(sf::Mouse::getPosition(window).y, window);
+          int j =  revealedElem.locateCellX(sf::Mouse::getPosition(window).x, window);
           // cele doua variabile de mai sus contin indecsii corespunzatori tablei
           // de joc in functie de pozitia mouse-ului
-          //std::cout << x << " " << y << std::endl;
-          revealedElem.userAction(x, y);
+         // std::cout << i << " " << j << std::endl;
+          revealedElem.userAction(i, j, displayedValues);
     }
 
     return false;

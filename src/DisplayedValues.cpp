@@ -45,6 +45,11 @@ void DisplayedValues::setSize(int _size)
     size = _size;
 }
 
+disp DisplayedValues::getValue(int i, int j)
+{
+    return values[i][j];
+}
+
 DisplayedValues::~DisplayedValues()
 {
     //dtor

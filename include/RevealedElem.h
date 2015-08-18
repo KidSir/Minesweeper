@@ -2,6 +2,7 @@
 #define REVEALEDELEM_H
 #include "dispEnum.h"
 #include <SFML/Graphics.hpp>
+#include "DisplayedValues.h"
 
 class RevealedElem
 {
@@ -11,11 +12,11 @@ class RevealedElem
         void setState(int, int, disp state);
         void init_board();
         void afisareConsola();
-        void displayBoard(sf::RenderWindow& window);
+        void displayBoard(sf::RenderWindow& window, sf::Font& mainScreenFont);
         int locateCellX(int, sf::RenderWindow&);
         int locateCellY(int, sf::RenderWindow&);
         void setGridValues();
-        void userAction(int, int);
+        void userAction(int, int, DisplayedValues displayedValues);
         virtual ~RevealedElem();
     protected:
     private:

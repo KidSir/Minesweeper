@@ -31,19 +31,19 @@ EnumState gameLoop(sf::RenderWindow& window)
     // pe ecran, valorile fiind precalculate
     revealedElem.afisareConsola();
     // afisare in consola pentru verificare corectitudine
-    revealedElem.displayBoard(window); // afisarea grafica a tablei de joc
+    revealedElem.displayBoard(window, mainScreenFont); // afisarea grafica a tablei de joc
 
     while (window.isOpen())
     {
         sf::Event event;
 
-        if(handleEventsGame(event, window, value, revealedElem))
+        if(handleEventsGame(event, window, value, revealedElem, displayedValues))
         {
             return value;
         }
         window.clear();
 
-        revealedElem.displayBoard(window);
+        revealedElem.displayBoard(window, mainScreenFont);
         //gameLogo.draw(window);
         //mainMessage.draw(window);
         window.display();

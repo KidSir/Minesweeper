@@ -12,6 +12,7 @@ class DisplayedValues
         virtual ~DisplayedValues();
         void setSize(int);
         void afisare();
+        disp getValue(int, int);
     protected:
     private:
         disp values[31][31];
